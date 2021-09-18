@@ -1,0 +1,13 @@
+
+new_tr = "<tr>"
+new_tr += "<td><%= @post.title %></td>"
+new_tr += "<td><%= @post.content %></td>"
+new_tr += "<td><%= link_to "Show", @post %></td>"
+new_tr += "<td><%= link_to "Edit", edit_post_path(@post) %></td>"
+new_tr += "<td><%= link_to "Destroy", @post, method: :delete, data: { confirm: "Are you sure?" } %></td>"
+new_tr += "</tr>"
+
+$("#post_title").val("")
+$("#post_content").val("")
+
+$("#my_posts").append(new_tr)
